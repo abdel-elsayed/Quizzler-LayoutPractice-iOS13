@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="824" width="428" height="102"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSI-li-mhO">
-                                <rect key="frame" x="20" y="44" width="398" height="662.33333333333337"/>
+                                <rect key="frame" x="20" y="78" width="398" height="628.33333333333337"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -59,32 +59,53 @@
                                     </progressView>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h56-m7-jbZ">
+                                <rect key="frame" x="20.000000000000004" y="44" width="63.333333333333343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrK-Qh-yVV">
+                                <rect key="frame" x="88.333333333333329" y="44" width="12.333333333333329" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.14509803921568626" green="0.17254901960784313" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rrK-Qh-yVV" secondAttribute="trailing" symbolic="YES" id="3pV-b7-MLR"/>
                             <constraint firstAttribute="bottom" secondItem="eGL-jB-Wwb" secondAttribute="bottom" id="8Ki-1W-FKN"/>
                             <constraint firstAttribute="bottom" secondItem="X9P-A2-PS3" secondAttribute="bottom" constant="30" id="AAd-K0-qvF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="h56-m7-jbZ" secondAttribute="trailing" symbolic="YES" id="Be9-Bm-q5u"/>
+                            <constraint firstItem="rSI-li-mhO" firstAttribute="top" secondItem="rrK-Qh-yVV" secondAttribute="bottom" id="ELJ-K9-t30"/>
+                            <constraint firstItem="h56-m7-jbZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="N2E-3O-Jna"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eGL-jB-Wwb" secondAttribute="trailing" id="RL2-EY-uis"/>
+                            <constraint firstItem="rrK-Qh-yVV" firstAttribute="leading" secondItem="h56-m7-jbZ" secondAttribute="trailing" constant="5" id="RTz-ab-nl5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X9P-A2-PS3" secondAttribute="trailing" constant="20" id="Rum-ce-OLw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rSI-li-mhO" secondAttribute="trailing" constant="10" id="TC8-Kb-BlW"/>
+                            <constraint firstItem="h56-m7-jbZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="V8n-fv-4Jw"/>
                             <constraint firstItem="eGL-jB-Wwb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ar8-zQ-KU0"/>
+                            <constraint firstItem="rrK-Qh-yVV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="c1t-Zn-nUl"/>
                             <constraint firstItem="X9P-A2-PS3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qAl-a1-ywi"/>
-                            <constraint firstItem="rSI-li-mhO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="r6H-Bb-sEV"/>
+                            <constraint firstItem="rSI-li-mhO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="r6H-Bb-sEV"/>
                             <constraint firstItem="X9P-A2-PS3" firstAttribute="top" secondItem="rSI-li-mhO" secondAttribute="bottom" constant="10" id="r6K-kc-mE2"/>
                             <constraint firstItem="rSI-li-mhO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uFh-a8-7Ob"/>
+                            <constraint firstItem="rSI-li-mhO" firstAttribute="top" secondItem="h56-m7-jbZ" secondAttribute="bottom" id="uFp-9I-dED"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="falseButton" destination="tbn-vQ-GyC" id="Rq8-oZ-9XF"/>
                         <outlet property="progressBarView" destination="TXm-qh-7Xg" id="7m0-aL-6oW"/>
                         <outlet property="questionLabel" destination="rSI-li-mhO" id="7L1-HU-Cdc"/>
+                        <outlet property="score" destination="rrK-Qh-yVV" id="OwT-Li-z0T"/>
                         <outlet property="trueButton" destination="oVw-Hl-IRe" id="htF-cP-WuF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.23188405797103" y="135.26785714285714"/>
+            <point key="canvasLocation" x="135.98130841121494" y="134.77321814254861"/>
         </scene>
     </scenes>
     <resources>
